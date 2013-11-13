@@ -1,0 +1,13 @@
+//////////////////////////////
+// HTML Element Extendable Classes
+//////////////////////////////
+
+$html-extendables-extended: false !default;
+
+@if not ($html-extendables-extended) {
+  %html-base {
+    @include html-base($extend: false, $font-size: $base-size, $line-height: $base-line-height);
+  }
+}
+
+$html-extendables-extended: true;

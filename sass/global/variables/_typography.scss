@@ -1,0 +1,30 @@
+//////////////////////////////
+// Typography
+//////////////////////////////
+
+//////////////////////
+// Default font stacks
+$font-sans: "Lucida Grande", Helvetica, Arial, sans-serif;;
+$font-serifs: "Lora", "Times New Roman", Times, serif;;
+$font-mono: monospace;
+//////////////////////
+
+//////////////////////
+// General font variables
+$font-body: $font-serifs;
+$font-headline: $font-serifs;
+//////////////////////
+
+//////////////////////
+// Font size and line-height
+$base-font-size: $base-size;
+$base-line-height: $base-font-size * 1.5;
+//////////////////////
+
+@import "compass/typography";
+@include establish-baseline;
+article {
+  // &:hover {
+    @include debug-vertical-alignment;
+  // }  
+}

@@ -1,0 +1,21 @@
+{
+  "extension": {
+    "sass": [
+      "_earlydance-style-guide.scss",
+      "global/**/*",
+      "bases/**/*",
+      "components/**/*",
+      "layouts/**/*"
+    ],
+    "images": [
+      "**"
+    ],
+    "js": [
+      "**"
+    ],
+    "fonts": [
+      "**"
+    ],
+    "license": "CC BY-NC-SA"
+  }
+}

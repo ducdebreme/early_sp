@@ -1,0 +1,38 @@
+
+// paragraph elements are visually separated from following elements
+%paragraph {
+  @include padding-trailer(0.5);
+}
+
+%list_common {
+  margin-left: 2em;
+}
+
+
+// apply line height
+p, ul, ol, li, hr {
+  @include adjust-font-size-to($base-font-size);
+}
+
+p {
+  @extend %paragraph;
+}
+
+ul {
+  @extend %paragraph;
+  @extend %list_common;
+  list-style-type: disc;
+}
+
+ol {
+  @extend %paragraph;
+  @extend %list_common;
+  list-style-type: decimal;
+  ol {
+    list-style-type: lower-roman;
+  }
+}
+
+hr {
+  @extend %paragraph;
+}
