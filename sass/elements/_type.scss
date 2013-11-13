@@ -10,8 +10,12 @@
 
 
 // apply line height
-p, ul, ol, li, hr {
+p, ul, ol, li {
   @include adjust-font-size-to($base-font-size);
+}
+
+hr {
+  @include margin-trailer(0.5);
 }
 
 p {
@@ -33,6 +37,8 @@ ol {
   }
 }
 
-hr {
-  @extend %paragraph;
+li>ol,
+li>ul {
+  padding: 0;
 }
+

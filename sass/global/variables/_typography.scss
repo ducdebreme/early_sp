@@ -11,7 +11,7 @@ $font-mono: monospace;
 
 //////////////////////
 // General font variables
-$font-body: $font-serifs;
+$font-body: $font-sans;
 $font-headline: $font-serifs;
 //////////////////////
 
@@ -25,6 +25,7 @@ $base-line-height: $base-font-size * 1.5;
 @include establish-baseline;
 article {
   // &:hover {
+    $grid-background-baseline-color: #ecc;
     @include debug-vertical-alignment;
   // }  
 }

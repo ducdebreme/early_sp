@@ -16,7 +16,8 @@ $output-selectors: true !default;
 // Values used to determine modular scale values
 // http://modularscale.com/
 ////////////////////////////
-$ratio: golden_ratio() major_third();
+$ratio: golden_ratio() 1.25;
+@debug "Ratio: " $ratio;
 $base-size: 18px;
 
 main {
