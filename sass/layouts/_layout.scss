@@ -5,40 +5,20 @@
 
 $grids: 12;
 $gutters: 1/3;
+$gutter-styles: 'split';
 
 article {
 	// @include background-grid();
 	@include clearfix;
 }
 
-// Symmetric Grid, can call with only span!
-// .span {
-//   @include grid-span(3, 1, $output-style: 'float');
-// }
-.span {
-  @include float-span(3);
-  background-color: orange;
-}
-// Make an item the last in a row
-.end-row {
-  @include grid-span(4, 9, $output-style: 'float');
-}
-.end-row {
-  @include float-span(4, 'last');
-}
-// Force a new row
-.new-row {
-  @include grid-span(2, 1, $output-style: 'float');
-  clear: both;
-}
-.new-row {
-  @include float-span(2, 'first');
-}
-// You can also pass in $grid and $gutter
-.float-all {
-  @include grid-span(3, 1, 5, .25, 'float');
-}
-.float-all {
-  @include float-span(3, $grid: 5, $gutter: .25);
-}
 
+@include breakpoint(36em) {
+
+  @for $i from 1 through 11 {
+    .span-md-#{$i} {
+      @include float-span(3);
+    } 
+  }
+
+}

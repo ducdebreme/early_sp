@@ -1,3 +1,16 @@
 @import "colors";
 @import "settings";
 @import "typography";
+
+// device sizes
+// Extra small screen / phone
+$screen-phone:                  480px;
+
+// Small screen / tablet
+$screen-tablet:                  768px;
+
+// Medium screen / desktop
+$screen-desktop:                  992px;
+
+// Large screen / wide desktop
+$screen-lg-desktop:                  1200px;
