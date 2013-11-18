@@ -1,0 +1,15 @@
+{
+  "myname": "Style Tile",
+	"contacts": [
+		{"vorname": "Stefan", "name": "Kühn"},
+		{"vorname": "Deug-Yun", "name": "Kim"}
+	]
+}
+---
+
+
+<p>NAME: {{page.title}}</p>
+
+{{#each page.contacts}}
+	<div>{{vorname}} -- {{> templ }}</div>
+{{/each}}
