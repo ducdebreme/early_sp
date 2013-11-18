@@ -1,15 +1,93 @@
 {
-  "myname": "Style Tile",
-	"contacts": [
-		{"vorname": "Stefan", "name": "Kühn"},
-		{"vorname": "Deug-Yun", "name": "Kim"}
-	]
+	"involved": [
+  {"name": "Pia Brocza", "street": "Hausstrasse 3", "place": "Wien", "country": "Austria"},
+  {"name": "Bernd Niedecken", "street": "Innsbrucker Str. 97", "place": "Freiburg", "country": "Germany"}
+  ],
+  "venues": [
+  {"name": "Tanzstudio Manhardt ", "street": "Neubaugasse 38", "place": "Wien", "country": "Austria"} 
+  ],
+  "contacts": [
+  { "name": "zeitenTANZ - Verein zur Förderung des historischen Tanzes in Österreich", "street": "Lobmeyrgasse 5/44", "place": "Wien", "country": "Austria"}
+  ]
+
 }
 ---
+<article class="page">
+  <div class="container page-inner">
+
+    <header>
+      <div class="container">
+
+        <h1 class="title">Barocktanztraining für Anfänger und Fortgeschrittene</h1>
+
+        <ul class="event-metadata container">
+          <li class="span-md-12 involved">with <a href="#">Bernd Niedecken</a>, <a href="#">Pia Brocza</a></li>
+          <li class="span-md-4"><span class="date">4. - 6. November 2013</span></li>
+          <li class="span-md-6"><span class="place">Vienna in Austria</span></li>
+        </ul>
+
+      </div>
+    </header>  
+
+    <div>
+
+      <!-- BEGIN MAIN CONTENT ROW -->
+      <div class="container section">
+        <div class="span-md-4">
+          <img src="http://placehold.it/300x300" style="width: 100%" /> 
+        </div>
+
+        <div class="span-md-6">
+          {{> event-detail-description}}
+        </div>
+        <div class="span-md-2 omega sidebar">
+          <!-- tags -->
+          <a class="label label-primary" href="#">All levels</a>
+          <a class="label label-primary" href="#">Baroque</a>
+          <a class="label label-primary" href="#">Ongoing classes</a>
+          <a class="label label-primary" href="#">Renaissance</a>
+        </div>
+      </div>
+      <!-- END MAIN CONTENT ROW -->
+
+      <!-- BEGIN MIDDLE ROW : VENUE -->
+      <!-- include a partial with data -->
+      {{#each page.venues}}
+       {{> address_with_map }}
+      {{/each}}
+      <!-- END MIDDLE ROW : VENUE -->
 
 
-<p>NAME: {{page.title}}</p>
+      <!-- BEGIN ROW : INVOLVED -->
+      <!-- translate here depending on the event type -->
+      <div class="container section">
+        <h3>Teachers</h3>
+        <!-- INVOLVED -->
+        <!-- include a partial with data -->
+        {{#each page.involved}}
+          <div class="span-md-4">
+            {{> address_short }}
+          </div>
+        {{/each}}
 
-{{#each page.contacts}}
-	<div>{{vorname}} -- {{> templ }}</div>
-{{/each}}
+      </div>
+
+
+      <!-- BEGIN ROW : CONTACT -->
+      <!-- translate here depending on the event type -->
+      <div class="container section">
+        <h3>Contacts</h3>
+        <!-- CONTACT -->
+        <!-- include a partial with data -->
+        {{#each page.contacts}}
+          <div class="span-md-6">
+            {{> address_short }}
+          </div>
+        {{/each}}
+      </div>
+
+
+      <!-- END MIDDLE ROW -->
+    </div>
+  </div>
+</article>

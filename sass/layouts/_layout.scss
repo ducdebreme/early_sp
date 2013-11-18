@@ -3,11 +3,13 @@
 // Add your layouts here.
 //////////////////////////////
 
+
+/* grid definition */
 $grids: 12;
 $gutters: 1/3;
 $gutter-styles: 'split';
 
-article {
+.container {
 	// @include background-grid();
 	@include clearfix;
 }
@@ -15,10 +17,34 @@ article {
 
 @include breakpoint(36em) {
 
-  @for $i from 1 through 11 {
+  @for $i from 1 through 12 {
     .span-md-#{$i} {
-      @include float-span(3);
+      @include float-span($i);
     } 
   }
 
+}
+
+body {
+  // color: $text-color;
+}
+
+/* the page's backgroud with a lightblue gradient */
+.page {
+  margin: 0 0.5em;
+  padding: 0 0.5em;
+}
+.page-inner {
+  background-color: white;
+  &:hover {@include debug-vertical-alignment;}
+}
+
+@media (min-width: $screen-tablet) {
+  .page {
+    margin: 0 4em;
+  }
+  body {
+    // light blue background
+    @include background(linear-gradient(top, #9BB8D8, #F8FAFC));
+  }
 }
