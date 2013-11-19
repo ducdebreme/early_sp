@@ -27,7 +27,7 @@ body {
   max-width: $sp-max-page-width;
   @include box-sizing('border-box');
   @include clearfix(true);
-  padding: .5em .75em;
+  // padding: .5em .75em; 
 }
 
 $prototype-header-text-color: #161616;

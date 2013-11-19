@@ -30,21 +30,30 @@ body {
 }
 
 /* the page's backgroud with a lightblue gradient */
+/*
+ * .page creates a white page in front of a background
+ * .page-inner creates the inner margin between the border and the content
+ * .content marks the content - do not apply padding/margin to it!
+ */
 .page {
-  margin: 0 0.5em;
-  padding: 0 0.5em;
+  background-color: white;
+  @include border-radius(20px);
+  margin: 0.5em;
 }
 .page-inner {
-  background-color: white;
+  padding: 0.5em 1.5em;
+}
+.content {
   &:hover {@include debug-vertical-alignment;}
 }
 
 @media (min-width: $screen-tablet) {
   .page {
-    margin: 0 4em;
+    margin-left: 4em;
+    margin-right: 4em;
   }
   body {
     // light blue background
-    @include background(linear-gradient(top, #9BB8D8, #F8FAFC));
+    @include background(linear-gradient(top, nth($primary-tints,1), nth($secondary-tints,3)));
   }
 }
