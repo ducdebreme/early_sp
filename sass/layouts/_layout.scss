@@ -54,6 +54,6 @@ body {
   }
   body {
     // light blue background
-    @include background(linear-gradient(top, nth($primary-tints,1), nth($secondary-tints,3)));
+    @include background(linear-gradient(top, nth($primary-tints,1), nth($secondary-tints,3) 66%, nth($secondary-shades,3) 100%));
   }
 }

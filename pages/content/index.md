@@ -1,6 +1,5 @@
 {
-  "title": "Content Strategy",
-  "template": "markdown"
+  "title": "Content Strategy"
 }
 ---
 

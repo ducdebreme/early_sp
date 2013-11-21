@@ -17,12 +17,12 @@ $output-selectors: true !default;
 // http://modularscale.com/
 ////////////////////////////
 $ratio: golden_ratio() 1.25;
-@debug "Ratio: " $ratio;
-$base-size: 18px;
+// @debug "Ratio: " $ratio;
 
-main {
-  font-size: $base-size;
-}
+$font-unit: 1rem;
+$relative-font-sizing: false;
+$base-size: 16px;
+
 
 
 //////////////////////////////
