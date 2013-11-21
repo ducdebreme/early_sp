@@ -1,25 +1,27 @@
 <!--[if lte IE 8]>         <html class="no-js lte-ie8"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
-    {{> prototype-shared-head}}
-  </head>
+<head>
+  {{> prototype-shared-head}}
+</head>
 
-  <body>
-    <div id="prototype-header">
-      <div class="content-wrapper">
-        {{> prototype-header}}
+<body>
+  <div id="prototype-header">
+    <div class="content-wrapper">
+      {{> prototype-header}}
+    </div>
+  </div>
+
+  {{> masthead}}
+
+  <main class="content-wrapper page">
+    <div class="page-inner">
+      <div class="content">
+        {{{body}}}
       </div>
     </div>
+  </main>
 
-    <main class="content-wrapper page">
-      <div class="page-inner">
-        <div class="content">
-          {{{body}}}
-        </div>
-      </div>
-    </main>
-
-    <!-- JavaScript goes in the footer! -->
-    {{> prototype-shared-foot}}
-  </body>
+  <!-- JavaScript goes in the footer! -->
+  {{> prototype-shared-foot}}
+</body>
 </html>

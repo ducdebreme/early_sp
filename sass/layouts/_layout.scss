@@ -31,9 +31,11 @@ body {
 
 /* the page's backgroud with a lightblue gradient */
 /*
- * .page creates a white page in front of a background
- * .page-inner creates the inner margin between the border and the content
- * .content marks the content - do not apply padding/margin to it!
+ * .content-wrapper indents the content section from the browser borders
+ * .page            creates a *white page* in front of a background
+ * .page-inner      creates the inner margin between the border and the content
+ * .content         marks the content - used for vertical rythm debug 
+ *                  do not apply padding/margin to it!
  */
 .page {
   background-color: white;
@@ -48,12 +50,12 @@ body {
 }
 
 @media (min-width: $screen-tablet) {
-  .page {
+  .content-wrapper {
     margin-left: 4em;
     margin-right: 4em;
   }
   body {
     // light blue background
-    @include background(linear-gradient(top, nth($primary-tints,1), nth($secondary-tints,3) 66%, nth($secondary-shades,3) 100%));
+    @include background(linear-gradient(top, nth($primary-tints,1), nth($secondary-tints,3) 50%, nth($secondary-shades,3) 100%));
   }
 }

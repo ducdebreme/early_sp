@@ -1,0 +1,17 @@
+
+.masthead {
+  input {
+   margin: 0;
+ }
+
+ #logo a {
+  color: nth($secondary-shades, 5);
+ }
+
+ a {
+  @include unset-border-links(false);
+  @include set-link-colors(nth($primary-shades, 2), nth($primary-shades, 4))
+ }
+
+
+}
