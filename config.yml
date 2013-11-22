@@ -34,7 +34,7 @@ sections:
   Elements: elements
   Components: components
   Colors: colors
-  Layout: layout
+  Custom: custom
 
 ## Style Tile Options
 styleTile:
@@ -74,6 +74,13 @@ components:
         classes:
           - big-button
           - warning
+  label:
+    - default
+    - primary
+    - success
+    - info
+    - warning
+    - error
 
 #########################
 ## Color Guide

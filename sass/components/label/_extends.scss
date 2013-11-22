@@ -1,0 +1,45 @@
+//////////////////////////////
+// Label Component Extendable Classes
+//////////////////////////////
+
+$label-extendables-extended: false !default;
+
+@if not ($label-extendables-extended) {
+  // Replace this line with extendable calsses
+  %label-base-extend {
+    @include label-base(false);
+  }
+
+  %label-default {
+    @include label-base();
+    @include label-variant($cs-status-primary);
+  }
+
+  %label-primary {
+    @include label-base();
+    @include label-variant($cs-status-primary);
+  }
+
+  %label-success {
+    @include label-base();
+    @include label-variant($cs-status-success);
+  }
+
+  %label-info {
+    @include label-base();
+    @include label-variant($cs-status-status);
+  }
+
+  %label-warning {
+    @include label-base();
+    @include label-variant($cs-status-warning);
+  }
+
+  %label-error {
+    @include label-base();
+    @include label-variant($cs-status-error);
+  }
+
+}
+
+$label-extendables-extended: true;

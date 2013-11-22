@@ -1,0 +1,95 @@
+//////////////////////////////
+// Label Component
+//
+// The partial and folder structure for this component should be as follows:
+// _label.scss
+// label (folder)
+//   _mixins.scss
+//   _extends.scss
+//
+// Automatic Sass parsing is done through special comment blocks
+//  - Start styling block for base component: @{component}
+//  - End styling block for base component:   {component}@
+//
+//  - Start styling block for specific component configuration: @{component--configuration}
+//  - End styling block for specific component configuration:   {component--configuration}@
+//////////////////////////////
+
+@import "label/mixins";
+@import "label/extends";
+
+//////////////////////////////
+// Having $output-selectors and $output-selectors--label set to `true` will output the CSS selectors for LabelComponent
+$output-selectors--label: true !default;
+@if $output-selectors and $output-selectors--label {
+//////////////////////////////
+
+//////////////////////////////
+// @{label}
+// Styling for Label Component
+.label {
+  @extend %label-base;
+}
+// {label}@
+//////////////////////////////
+
+
+//////////////////////////////
+// @{label--default}
+// Default styling for Label Component
+.label.default {
+  @extend %label-default;
+}
+// {label--default}@
+//////////////////////////////
+
+//////////////////////////////
+// @{label--primary}
+// Primary styling for Label Component
+.label.primary {
+  @extend %label-primary;
+}
+// {label--primary}@
+//////////////////////////////
+
+
+//////////////////////////////
+// @{label--success}
+// Success styling for Label Component
+.label.success {
+  @extend %label-success;
+}
+// {label--success}@
+//////////////////////////////
+
+
+//////////////////////////////
+// @{label--info}
+// Info styling for Label Component
+.label.info {
+  @extend %label-info;
+}
+// {label--info}@
+//////////////////////////////
+
+
+//////////////////////////////
+// @{label--warning}
+// Warning styling for Label Component
+.label.warning {
+  @extend %label-warning;
+}
+// {label--warning}@
+//////////////////////////////
+
+
+//////////////////////////////
+// @{label--error}
+// Error styling for Label Component
+.label.error {
+  @extend %label-error;
+}
+// {label--error}@
+//////////////////////////////
+
+}

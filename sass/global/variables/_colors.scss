@@ -32,6 +32,8 @@ $secondary-shades: shade-stack(cs-secondary());
 $tertiary-shades:  shade-stack(cs-tertiary());
 $quaternary-shades:  shade-stack(cs-quadrary());
 
+$orange-reds: colour-stack(#ffcc00, red, 25%, 50%, 75%, 85%);
+
 $cs-secondary: cs-secondary();
 
 // link colors
@@ -66,9 +68,12 @@ $cs-border: $gray;
 //////////////////////////////
 // Status Colors
 //////////////////////////////
-$cs-status-status: nth($quaternary-tints, 6);
-$cs-status-warning: nth($secondary-tints, 2);
-$cs-status-error: nth($tertiary-shades, 2);
+$cs-status-status: nth($primary-tints, 1);
+$cs-status-warning: nth($orange-reds, 1);
+$cs-status-error: nth($orange-reds, 4);
+
+$cs-status-primary: nth($black-tints, 4);
+$cs-status-success: nth($tertiary-tints, 1);
 
 //////////////////////////////
 // Component defaults

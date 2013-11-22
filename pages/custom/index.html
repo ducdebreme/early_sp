@@ -1,0 +1,17 @@
+{
+  "links": [
+    "event_detail",
+    "event_list"
+  ]
+
+}
+---
+<article>
+  <h1>early-dance.de demo pages</h1>
+  <ul>
+    {{#each page.links}}
+      <li><a href="/{{this}}" >{{this}}</a></li>
+    {{/each}}
+  </ul>
+  
+</article>
