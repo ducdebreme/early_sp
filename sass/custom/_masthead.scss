@@ -1,17 +1,38 @@
 
-.masthead {
-  input {
-   margin: 0;
- }
+@import "compass/css3/transition";
+@import "compass/css3/text-shadow";
 
- #logo a {
-  color: nth($secondary-shades, 5);
- }
+#masthead {
+	input {
+		margin: 0;
+	}
 
- a {
-  @include unset-border-links(false);
-  @include set-link-colors(nth($primary-shades, 2), nth($primary-shades, 4))
- }
+	#logo a {
+		position: relative;
+		left: 0;
+		// &:hover {
+		// 	left: 0.1em;
+		// 	top: 0.05em;
+		// 	@include single-transition( left top, 0.15s, ease-in-out);
+		// }
+		$shadow_color: nth($primary-tints,6);
+
+		$default-text-shadow-color: rgba($shadow_color, 0.7);
+		$default-text-shadow-blur: 3px;
+		$default-text-shadow-v-offset: 3px;
+		$default-text-shadow-h-offset: 3px;
+		@include single-text-shadow;
+		// @include single-text-shadow(1px, 1px, 1px, 0, rgba($shadow_color, 0.2)); 
+	}
+
+	a {
+		@include unset-border-links(false);
+		$link_color: nth($secondary-shades, 4);
+		@include set-link-colors($link_color, nth($secondary-tints, 3), $link_color, $link_color, $link_color, false);
+
+		@include single-transition( color, 0.15s, ease-in);
+		// border-color: orange;
+	}
 
 
 }
