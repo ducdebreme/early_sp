@@ -57,7 +57,7 @@ $cs-background: $white;
 // Text Colors
 //////////////////////////////
 $cs-text-dark: $black;
-$cs-text-light: $white;
+$cs-text-light: nth($black-tints,2);
 $cs-text: $cs-text-dark;
 
 //////////////////////////////

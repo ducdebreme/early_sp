@@ -8,27 +8,24 @@
 }
 ---
 <section>
-  <article class="row">
+  <article class="container">
 
     <div class="date main-date span-md-2">
-      <abbr title="Oct. 1, 2013" class="dtstart datesheet">
+      <!-- @see http://html5doctor.com/the-time-element/ -->
+      <time datetime="2013-10-01" class="dtstart datesheet">
         <span class="month">Oct</span> 
         <span class="day">1</span> 
         <span class="year">2013</span>
-      </abbr> 
+      </time> 
       <span class="sep">–</span>
-      <abbr title="Oct. 2, 2013" class="dtend datesheet">
+      <time datetime="2013-10-02" class="dtend datesheet">
         <span class="month">Oct</span> 
         <span class="day">2</span> 
         <span class="year">2013</span>
-      </abbr>
+      </time>
     </div>
 
-    <div class="span-md-1">
-      <img src="http://placehold.it/300x300" style="width: 100%" /> 
-    </div>
-
-    <div class="span-md-5">
+    <div class="span-md-6">
       <h4><a href="#">Ateliers hebdomadaires 2013-2014</a></h4>
       <ul>
         <li class="label primary">Baroque</li>
@@ -39,9 +36,11 @@
         <li>Compagnie Fantaisies Baroques Irène Feste</li>
         <li>Pierre-François Dollé</li>
       </ul>
+      
+      <img src="http://placehold.it/300x300" style="width: 66%" />
     </div>
 
-    <div class="span-md-2 omega">
+    <div class="span-md-2">
       <div class="city">Paris</div>
       <div class="country">France</div>
     </div>
