@@ -7,10 +7,13 @@
 
 }
 ---
+<!-- fit image to remaining space 
+  http://jsfiddle.net/ducdebreme/rp6Fs/
+-->
 <section>
-  <article class="container">
+  <article class="container event-list">
 
-    <div class="date main-date span-md-2">
+    <div class="date main-date span-md-3">
       <!-- @see http://html5doctor.com/the-time-element/ -->
       <time datetime="2013-10-01" class="dtstart datesheet">
         <span class="month">Oct</span> 
@@ -25,19 +28,21 @@
       </time>
     </div>
 
-    <div class="span-md-6">
-      <h4><a href="#">Ateliers hebdomadaires 2013-2014</a></h4>
-      <ul>
-        <li class="label primary">Baroque</li>
-        <li class="label primary">Ongoing classes</li>
-        <li class="label primary">Workshop</li>
-      </ul>
-      <ul>
-        <li>Compagnie Fantaisies Baroques Irène Feste</li>
-        <li>Pierre-François Dollé</li>
-      </ul>
+    <div class="span-md-7">
+      <div class="event-list__desc">
+        <h3 class="event-list__title"><a href="#">Ateliers hebdomadaires 2013-2014</a></h3>
+        <ul class="no-bullets">
+          <li class="label primary">Baroque</li>
+          <li class="label primary">Ongoing classes</li>
+          <li class="label primary">Workshop</li>
+        </ul>
+        <ul>
+          <li>Compagnie Fantaisies Baroques Irène Feste</li>
+          <li>Pierre-François Dollé</li>
+        </ul>
+      </div>
       
-      <img src="http://placehold.it/300x300" style="width: 66%" />
+      <img src="http://placehold.it/300x300" class="event-list__img" />
     </div>
 
     <div class="span-md-2">

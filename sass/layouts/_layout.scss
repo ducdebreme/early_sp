@@ -15,7 +15,7 @@ $gutter-styles: 'split';
 }
 
 
-@include breakpoint(36em) {
+@include breakpoint($screen-tablet) {
 
   @for $i from 1 through 12 {
     .span-md-#{$i} {

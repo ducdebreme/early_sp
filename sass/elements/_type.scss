@@ -1,4 +1,9 @@
 
+%body_text {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
 // paragraph elements are visually separated from following elements
 %paragraph {
   @include padding-trailer(0.5);
@@ -12,6 +17,10 @@
 // apply line height
 p, ul, ol, li {
   @include adjust-font-size-to($base-font-size);
+}
+
+.no-bullets {
+    @include no-bullet;
 }
 
 hr {

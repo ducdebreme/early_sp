@@ -4,26 +4,39 @@
 // TODO check and replace $gray-light $gray-lighter $gray-dark
 @import "compass/css3/box-shadow";
 
+@mixin equal_font_size_line_height($size) {
+  font-size: $size;
+  line-height: $size;
+}
+
 
 .event-metadata {
 
   @include no-bullet;
   
-
-  .involved {
-  }
-
-
   .date, .place {
     @extend h4;
     // color: $gray-light;
   }
 }
 
-@mixin equal_font_size_line_height($size) {
-  font-size: $size;
-  line-height: $size;
+
+@include breakpoint($screen-tablet) {
+  .event-list__title {
+    @include adjust-font-size-to($base-font-size);
+  }
+  .event-list__desc {
+    width: 75%;
+    float: right;
+  }
+
+  .event-list__img {
+    width: 22%;
+    float: left;
+    margin-right: 3%;
+  }
 }
+
 
 .datesheet {
   @include breakpoint($screen-tablet) {
@@ -48,7 +61,7 @@
     display: inline-block;
     @include single-box-shadow(nth($black-tints,3), 3px, 3px, 3px, false, false);
 
-    padding: 0.2em 0.4em;
+    padding: 0.2em 0.3em;
     @include background(linear-gradient(bottom, nth($black-tints,5), #fff));
     // background-color: $gray-lighter;
 
