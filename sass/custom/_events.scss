@@ -21,21 +21,48 @@
 }
 
 
-@include breakpoint($screen-tablet) {
-  .event-list__title {
-    @include adjust-font-size-to($base-font-size);
-  }
-  .event-list__desc {
-    width: 75%;
-    float: right;
-  }
+// @include breakpoint($screen-tablet) {
+//   .event-list__title {
+//     @include adjust-font-size-to($base-font-size);
+//   }
+//   .event-list__desc {
+//     width: 75%;
+//     float: right;
+//   }
 
-  .event-list__img {
-    width: 22%;
-    float: left;
-    margin-right: 3%;
-  }
+//   .event-list__img {
+//     width: 22%;
+//     float: left;
+//     margin-right: 3%;
+//   }
+// }
+
+@debug "$gutter-styles" $gutter-styles;
+@debug "$output" $output;
+
+article {
+  @include background-grid();
 }
+
+.event-list__date { 
+  @include float-span(9,4);
+  background-color: red;
+}
+.event-list__img { 
+  @include float-span(3,1);
+  background-color: orange;
+}
+.event-list__desc { 
+  @include grid-span(9,4);
+  background-color: green;
+}
+.event-list__place { 
+  @include grid-span(9,4);
+  background-color: blue;
+
+}
+
+
 
 
 .datesheet {

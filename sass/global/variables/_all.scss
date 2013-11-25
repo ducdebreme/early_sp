@@ -4,13 +4,13 @@
 
 // device sizes
 // Extra small screen / phone
-$screen-phone:                  480px;
+$screen-phone:                  40em; // 640px
 
 // Small screen / tablet
-$screen-tablet:                  49em;
+$screen-tablet:                  50em; // 800px
 
 // Medium screen / desktop
-$screen-desktop:                  992px;
+$screen-desktop:                  60em; // 960px
 
 // Large screen / wide desktop
-$screen-lg-desktop:                  1200px; 
+$screen-lg-desktop:                  75em; // 1200px
