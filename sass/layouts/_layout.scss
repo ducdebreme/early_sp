@@ -41,12 +41,13 @@ body {
   background-color: white;
   @include border-radius(20px);
   margin: 0.5em;
+  max-width: $screen-lg-desktop;
 }
 .page-inner {
   padding: 0.5em 1.5em;
 }
 .content {
-  &:hover {@include debug-vertical-alignment;}
+  // &:hover {@include debug-vertical-alignment;}
 }
 
 @media (min-width: $screen-tablet) {

@@ -11,72 +11,31 @@
 <h3>Test</h3>
 <section>
   <article  class="container event-list">
-    
-    <div class="event-list__date">
-      <!-- @see http://html5doctor.com/the-time-element/ -->
-      <time datetime="2013-10-01" class="dtstart datesheet">
-        <span class="month">Oct</span> 
-        <span class="day">1</span> 
-        <span class="year">2013</span>
-      </time> 
-      <span class="sep">–</span>
-      <time datetime="2013-10-02" class="dtend datesheet">
-        <span class="month">Oct</span> 
-        <span class="day">2</span> 
-        <span class="year">2013</span>
-      </time>
-    </div>
 
-    <div class="event-list__img">
-      <img src="http://placehold.it/300x300" class="event-list__img" />
-    </div>
+    <!-- event-list in html5 format -->
+    <a href="#" class="hover">
 
-    <div class="event-list__desc">
-      <h3 class="event-list__title"><a href="#">Ateliers hebdomadaires 2013-2014</a></h3>
-      <ul class="no-bullets">
-        <li class="label primary">Baroque</li>
-        <li class="label primary">Ongoing classes</li>
-        <li class="label primary">Workshop</li>
-      </ul>
-      <ul>
-        <li>Compagnie Fantaisies Baroques Irène Feste</li>
-        <li>Pierre-François Dollé</li>
-      </ul>
+      <div class="event-list__date">
+        <!-- @see http://html5doctor.com/the-time-element/ -->
+        <time datetime="2013-10-01" class="dtstart datesheet">
+          <span class="month">Oct</span> 
+          <span class="day">1</span> 
+          <span class="year">2013</span>
+        </time> 
+        <span class="sep">–</span>
+        <time datetime="2013-10-02" class="dtend datesheet">
+          <span class="month">Oct</span> 
+          <span class="day">2</span> 
+          <span class="year">2013</span>
+        </time>
+      </div>
 
-    </div>
+      <div class="event-list__img">
+        <img src="http://placehold.it/300x300" class="event-list__img" />
+      </div>
 
-    <div class="event-list__place">
-      <div class="city">Paris</div>
-      <div class="country">France</div>
-    </div>
-
-  </article>
-</section>
-
-<!-- fit image to remaining space 
-  http://jsfiddle.net/ducdebreme/rp6Fs/
--->
-<section>
-  <article class="container event-list">
-
-    <div class="date main-date span-md-3">
-      <!-- @see http://html5doctor.com/the-time-element/ -->
-      <time datetime="2013-10-01" class="dtstart datesheet">
-        <span class="month">Oct</span> 
-        <span class="day">1</span> 
-        <span class="year">2013</span>
-      </time> 
-      <span class="sep">–</span>
-      <time datetime="2013-10-02" class="dtend datesheet">
-        <span class="month">Oct</span> 
-        <span class="day">2</span> 
-        <span class="year">2013</span>
-      </time>
-    </div>
-
-    <div class="span-md-7">
       <div class="event-list__desc">
-        <h3 class="event-list__title"><a href="#">Ateliers hebdomadaires 2013-2014</a></h3>
+        <h3 class="event-list__title">Ateliers hebdomadaires 2013-2014</h3>
         <ul class="no-bullets">
           <li class="label primary">Baroque</li>
           <li class="label primary">Ongoing classes</li>
@@ -87,16 +46,19 @@
           <li>Pierre-François Dollé</li>
         </ul>
       </div>
-      
-      <img src="http://placehold.it/300x300" class="event-list__img" />
-    </div>
 
-    <div class="span-md-2">
-      <div class="city">Paris</div>
-      <div class="country">France</div>
-    </div>
+      <div class="event-list__place">
+        <div class="city">Paris</div>
+        <div class="country">France</div>
+      </div>
+    </a>
 
   </article>
+</section>
+
+<!-- fit image to remaining space 
+  http://jsfiddle.net/ducdebreme/rp6Fs/
+-->
 
 </section>
 

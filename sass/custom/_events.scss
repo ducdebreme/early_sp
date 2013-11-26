@@ -41,7 +41,7 @@
 @debug "$output" $output;
 
 article {
-  @include background-grid();
+  // @include background-grid();
 }
 
 
@@ -66,6 +66,7 @@ article {
   display: none;
 }
 
+
 @include breakpoint($screen-phone) {
   .event-list__date { 
     @include float-span(9,4);
@@ -83,6 +84,13 @@ article {
   .event-list__place { 
     @include grid-span(9,4);
   }
+
+  // special
+  .event-list__title {
+    @include adjust-leading-to(1);
+    @include padding-trailer(0.5);
+  }
+
 }
 @include breakpoint($screen-tablet) {
   .event-list__date { 
@@ -99,8 +107,23 @@ article {
   }
 }
 
+// TODO move this somewhere else
+a.hover{
+  margin: 0.25em;
+  padding: 0.25em;
+  border: 0;
+  display: block;
+  overflow: hidden;
 
+  &:hover {
+    @extend %box-shadow-around;
+    color: $cs-text;
+    // @include single-box-shadow;
+    // background-color: nth($secondary-tints,6);
+  }
+}
 
+// calendar sheet theming
 .datesheet {
   @include breakpoint($screen-tablet) {
     & > span {
