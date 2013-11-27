@@ -4,10 +4,7 @@
 // TODO check and replace $gray-light $gray-lighter $gray-dark
 @import "compass/css3/box-shadow";
 
-@mixin equal_font_size_line_height($size) {
-  font-size: $size;
-  line-height: $size;
-}
+
 
 
 .event-metadata {
@@ -18,30 +15,6 @@
     @extend h4;
     // color: $gray-light;
   }
-}
-
-
-// @include breakpoint($screen-tablet) {
-//   .event-list__title {
-//     @include adjust-font-size-to($base-font-size);
-//   }
-//   .event-list__desc {
-//     width: 75%;
-//     float: right;
-//   }
-
-//   .event-list__img {
-//     width: 22%;
-//     float: left;
-//     margin-right: 3%;
-//   }
-// }
-
-@debug "$gutter-styles" $gutter-styles;
-@debug "$output" $output;
-
-article {
-  // @include background-grid();
 }
 
 
@@ -62,52 +35,17 @@ article {
 //   background-color: blue;
 // }
 
-.event-list__img img {
-  display: none;
+
+article {
+  // @include background-grid();
 }
 
 
-@include breakpoint($screen-phone) {
-  .event-list__date { 
-    @include float-span(9,4);
-  }
-  .event-list__img { 
-    @include float-span(3,1);
-    img {
-      display: block;
-      width: 90%;
-    }
-  }
-  .event-list__desc { 
-    @include grid-span(9,4);
-  }
-  .event-list__place { 
-    @include grid-span(9,4);
-  }
 
-  // special
-  .event-list__title {
-    @include adjust-leading-to(1);
-    @include padding-trailer(0.5);
-  }
 
-}
-@include breakpoint($screen-tablet) {
-  .event-list__date { 
-    @include float-span(2,1);
-  }
-  .event-list__img { 
-    @include float-span(2,3);
-  }
-  .event-list__desc { 
-    @include float-span(6,5);
-  }
-  .event-list__place { 
-    @include float-span(2,11);
-  }
-}
 
-// TODO move this somewhere else
+
+// TODO move this somewhere else (a common place)
 a.hover{
   margin: 0.25em;
   padding: 0.25em;
@@ -120,38 +58,5 @@ a.hover{
     color: $cs-text;
     // @include single-box-shadow;
     // background-color: nth($secondary-tints,6);
-  }
-}
-
-// calendar sheet theming
-.datesheet {
-  @include breakpoint($screen-tablet) {
-    & > span {
-      display: block;
-      text-align: center;
-      font-weight: bold;
-      color: $cs-text-light;
-    }
-    & > .month {
-      @include equal_font_size_line_height(0.8 * $base-font-size);
-      font-weight: 700;
-    }
-    & > .day {
-      @include equal_font_size_line_height(1.1667 * $base-font-size);
-      padding: 0.2em 0;
-    }
-    & > .year {
-      @include equal_font_size_line_height(0.66 * $base-font-size);
-    }
-
-    display: inline-block;
-    @include single-box-shadow(nth($black-tints,3), 3px, 3px, 3px, false, false);
-
-    padding: 0.2em 0.3em;
-    @include background(linear-gradient(bottom, nth($black-tints,5), #fff));
-    // background-color: $gray-lighter;
-
-    // border-right: 1px solid $gray-light;
-    // border-bottom: 1px solid $gray-light;
   }
 }

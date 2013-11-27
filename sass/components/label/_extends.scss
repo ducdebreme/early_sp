@@ -6,6 +6,10 @@ $label-extendables-extended: false !default;
 
 @if not ($label-extendables-extended) {
   // Replace this line with extendable calsses
+  %label-base {
+    @include label-base(false);
+  }
+
   %label-base-extend {
     @include label-base(false);
   }

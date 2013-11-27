@@ -1,0 +1,35 @@
+//////////////////////////////
+// Datesheet Component Mixins
+//////////////////////////////
+
+@mixin equal_font_size_line_height($size) {
+  font-size: $size;
+  line-height: $size;
+}
+
+@mixin datesheet() {
+  & > span {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    color: $cs-text-light;
+  }
+  & > .month {
+    @include equal_font_size_line_height(0.8 * $base-font-size);
+    font-weight: 700;
+  }
+  & > .day {
+    @include equal_font_size_line_height(1.1667 * $base-font-size);
+    padding: 0.2em 0;
+  }
+  & > .year {
+    @include equal_font_size_line_height(0.66 * $base-font-size);
+  }
+
+  display: inline-block;
+  @include single-box-shadow(nth($black-tints,3), 3px, 3px, 3px, false, false);
+
+  padding: 0.2em 0.3em;
+  @include background(linear-gradient(bottom, nth($black-tints,5), #fff));
+
+}

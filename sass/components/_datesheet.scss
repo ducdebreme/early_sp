@@ -1,0 +1,46 @@
+//////////////////////////////
+// Datesheet Component
+//
+// The partial and folder structure for this component should be as follows:
+// _datesheet.scss
+// datesheet (folder)
+//   _mixins.scss
+//   _extends.scss
+//
+// Automatic Sass parsing is done through special comment blocks
+//  - Start styling block for base component: @{component}
+//  - End styling block for base component:   {component}@
+//
+//  - Start styling block for specific component configuration: @{component--configuration}
+//  - End styling block for specific component configuration:   {component--configuration}@
+//////////////////////////////
+
+@import "datesheet/mixins";
+@import "datesheet/extends";
+
+//////////////////////////////
+// Having $output-selectors and $output-selectors--datesheet set to `true` will output the CSS selectors for DatesheetComponent
+$output-selectors--datesheet: true !default;
+@if $output-selectors and $output-selectors--datesheet {
+//////////////////////////////
+
+//////////////////////////////
+// @{datesheet}
+// Styling for Datesheet Component - below a given breakpoint the date changes into a simple date
+.datesheet {
+  @include breakpoint($screen-tablet) {
+    @include datesheet;
+  }
+}
+// {datesheet}@
+//////////////////////////////
+
+
+//////////////////////////////
+// @{datesheet--default}
+// Default styling for Datesheet Component
+
+// {datesheet--default}@
+//////////////////////////////
+
+}

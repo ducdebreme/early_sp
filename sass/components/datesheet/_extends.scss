@@ -1,0 +1,12 @@
+//////////////////////////////
+// Datesheet Component Extendable Classes
+//////////////////////////////
+
+$datesheet-extendables-extended: false !default;
+
+@if not ($datesheet-extendables-extended) {
+
+
+}
+
+$datesheet-extendables-extended: true;

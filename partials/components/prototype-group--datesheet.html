@@ -1,0 +1,18 @@
+<div class="prototype-group--datesheet">
+
+  {{#if page.examples}}
+    {{{create-example-sass "datesheet" all true}}}
+  {{/if}}
+  <ul component-list>
+    {{#each options.grunt.userConfig.components.datesheet}}
+      <li>
+        {{{component "datesheet" this}}}
+
+        {{#if ../page.examples}}
+          {{{create-example-html "datesheet" ../this}}}
+          {{{create-example-sass "datesheet" ../this}}}
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</div>

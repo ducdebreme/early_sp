@@ -1,0 +1,48 @@
+
+// event-list layout
+
+// by default don't show (little screens)
+.event-list__img img {
+  display: none;
+}
+
+
+@include breakpoint($screen-phone) {
+  .event-list__date { 
+    @include float-span(9,4);
+  }
+  .event-list__img { 
+    @include float-span(3,1);
+    img {
+      display: block;
+      width: 90%;
+    }
+  }
+  .event-list__desc { 
+    @include grid-span(9,4);
+  }
+  .event-list__place { 
+    @include grid-span(9,4);
+  }
+
+  // special
+  .event-list__title {
+    @include adjust-leading-to(1);
+    @include padding-trailer(0.5);
+  }
+
+}
+@include breakpoint($screen-tablet) {
+  .event-list__date { 
+    @include float-span(2,1);
+  }
+  .event-list__img { 
+    @include float-span(2,3);
+  }
+  .event-list__desc { 
+    @include float-span(6,5);
+  }
+  .event-list__place { 
+    @include float-span(2,11);
+  }
+}

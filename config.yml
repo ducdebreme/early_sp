@@ -81,6 +81,8 @@ components:
     - info
     - warning
     - error
+  datesheet:
+    - default
 
 #########################
 ## Color Guide
