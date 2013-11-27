@@ -41,6 +41,7 @@ body {
   background-color: white;
   @include border-radius(20px);
   margin: 0.5em;
+  // @extend %box-shadow-around;
 }
 .page-inner {
   padding: 0.5em 1.5em;
@@ -55,8 +56,9 @@ body {
     margin-right: 4em;
   }
   body {
+    background-color: #ededed;
     // light blue background
-    @include background(linear-gradient(top, nth($primary-tints,1), nth($secondary-tints,3) 50%, nth($primary-tints,2) 100%));
+    // @include background(linear-gradient(top, nth($primary-tints,1), nth($secondary-tints,3) 50%, nth($primary-tints,2) 100%));
   }
 }
 
