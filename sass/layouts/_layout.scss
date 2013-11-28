@@ -39,9 +39,9 @@ body {
  */
 .page {
   background-color: white;
-  @include border-radius(20px);
+  // @include border-radius(20px);
   margin: 0.5em;
-  // @extend %box-shadow-around;
+  @include single-box-shadow(#ddd,0,0,10px);
 }
 .page-inner {
   padding: 0.5em 1.5em;

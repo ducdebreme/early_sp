@@ -4,5 +4,5 @@
 }
 
 %box-shadow-around {
-  @include single-box-shadow(nth($black-tints,3));
+  @include single-box-shadow(nth($black-tints,4));
 }
