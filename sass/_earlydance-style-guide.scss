@@ -75,3 +75,27 @@ $experimental-support-for-microsoft    : false !default;
 //////////////////////////////
 @import "custom/events";
 @import "custom/masthead";
+
+a.img_hover {
+	position: relative;
+	display: block;
+
+	&:hover > .img_hover_text {
+		@include opacity(1);
+	}
+
+	& > .img_hover_text {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		padding-top: 1em;
+		padding-left: 1em;
+		background-color: red;
+		color: white;
+		@include opacity(0);
+    @include single-transition(all, 0.3s);
+	}
+}
+
