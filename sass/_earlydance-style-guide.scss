@@ -75,27 +75,43 @@ $experimental-support-for-microsoft    : false !default;
 //////////////////////////////
 @import "custom/events";
 @import "custom/masthead";
+@import "custom/img_hover";
 
-a.img_hover {
-	position: relative;
-	display: block;
+@import "icomoon/style";
 
-	&:hover > .img_hover_text {
-		@include opacity(1);
+.search {
+	margin-bottom: 0.5em;
+
+	.search_wrapper {
+		float: right;
 	}
 
-	& > .img_hover_text {
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		padding-top: 1em;
-		padding-left: 1em;
-		background-color: red;
-		color: white;
-		@include opacity(0);
-    @include single-transition(all, 0.3s);
+	.search_input {
+		@include border-left-radius(25px);
+		border: 0;
+		font-size: $base-font-size;
+		line-height: 1em;
+		height: 2.25em;
+		padding: 8px 8px 6px 15px;
+		width: 10em;
+		display: block;
+		float: left;
+		outline-offset: 0;
+		// Workaround for Chrome @see http://stackoverflow.com/questions/2943548/best-way-to-reset-remove-chromes-input-highlighting-focus-border
+		&:focus {
+			outline: none;
+		}
+	}
+	.search_button {
+		@include border-right-radius(25px);
+		border: none;
+		font-family: 'icomoon';
+		font-size: $base-font-size;
+		line-height: 1em;
+		height: 2.25em;
+		padding: 8px 15px;
+		display: block;
+		float: left;
 	}
 }
 
