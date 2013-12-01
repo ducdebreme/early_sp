@@ -19,6 +19,8 @@ $font-headline: $font-serifs;
 // Font size and line-height
 $base-font-size: $base-size;
 $base-line-height: $base-font-size * 1.5;
+// small fonts
+$base-font-size-small: $base-font-size * 0.8;
 //////////////////////
 
 @import "compass/typography";

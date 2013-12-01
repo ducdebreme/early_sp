@@ -1,0 +1,44 @@
+//////////////////////////////
+// Form Component
+//
+// The partial and folder structure for this component should be as follows:
+// _form.scss
+// form (folder)
+//   _mixins.scss
+//   _extends.scss
+//
+// Automatic Sass parsing is done through special comment blocks
+//  - Start styling block for base component: @{component}
+//  - End styling block for base component:   {component}@
+//
+//  - Start styling block for specific component configuration: @{component--configuration}
+//  - End styling block for specific component configuration:   {component--configuration}@
+//////////////////////////////
+
+@import "form/mixins";
+@import "form/extends";
+
+//////////////////////////////
+// Having $output-selectors and $output-selectors--form set to `true` will output the CSS selectors for FormComponent
+$output-selectors--form: true !default;
+@if $output-selectors and $output-selectors--form {
+//////////////////////////////
+
+//////////////////////////////
+// @{form}
+// Styling for Form Component
+
+// {form}@
+//////////////////////////////
+
+
+//////////////////////////////
+// @{form--search}
+// Search styling for Form Component
+form.search {
+  @include header_search_form();
+}
+// {form--search}@
+//////////////////////////////
+
+}

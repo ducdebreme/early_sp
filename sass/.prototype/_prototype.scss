@@ -221,3 +221,22 @@ $prototype-header-text-color: #161616;
     color: magenta;
   }
 }
+
+// smaller code samples on components page
+details {
+  font-size: $base-font-size-small;
+  line-height: 1;
+  color: #8a8a8a;
+  pre {
+    margin: 0.5em;
+    padding: 0.5em;
+    @extend %mono;
+    color: #505050;
+    background-color: #fff4e6;
+  }
+}
+
+.prototype-group--form form {
+  // add background-color for demo of search form
+  background-color: #e7e7e7;
+}

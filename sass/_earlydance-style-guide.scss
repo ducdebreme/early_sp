@@ -62,6 +62,7 @@ $experimental-support-for-microsoft    : false !default;
 @import "components/pager";
 @import "components/label";
 @import "components/datesheet";
+@import "components/form";
 //////////////////////////////
 
 //////////////////////////////
@@ -79,39 +80,5 @@ $experimental-support-for-microsoft    : false !default;
 
 @import "icomoon/style";
 
-.search {
-	margin-bottom: 0.5em;
 
-	.search_wrapper {
-		float: right;
-	}
-
-	.search_input {
-		@include border-left-radius(25px);
-		border: 0;
-		font-size: $base-font-size;
-		line-height: 1em;
-		height: 2.25em;
-		padding: 8px 8px 6px 15px;
-		width: 10em;
-		display: block;
-		float: left;
-		outline-offset: 0;
-		// Workaround for Chrome @see http://stackoverflow.com/questions/2943548/best-way-to-reset-remove-chromes-input-highlighting-focus-border
-		&:focus {
-			outline: none;
-		}
-	}
-	.search_button {
-		@include border-right-radius(25px);
-		border: none;
-		font-family: 'icomoon';
-		font-size: $base-font-size;
-		line-height: 1em;
-		height: 2.25em;
-		padding: 8px 15px;
-		display: block;
-		float: left;
-	}
-}
 

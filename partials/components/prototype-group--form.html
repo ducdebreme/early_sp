@@ -1,0 +1,18 @@
+<div class="prototype-group--form">
+
+  {{#if page.examples}}
+    {{{create-example-sass "form" all true}}}
+  {{/if}}
+  <ul component-list>
+    {{#each options.grunt.userConfig.components.form}}
+      <li>
+        {{{component "form" this}}}
+
+        {{#if ../page.examples}}
+          {{{create-example-html "form" ../this}}}
+          {{{create-example-sass "form" ../this}}}
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
