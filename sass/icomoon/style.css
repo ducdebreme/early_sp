@@ -53,3 +53,33 @@
 .icon-edit:before {
 	content: "\e603";
 }
+.icon-comment-alt:before {
+	content: "\e604";
+}
+.icon-search:before {
+	content: "\e605";
+}
+.icon-circle-arrow-right:before {
+	content: "\e60c";
+}
+.icon-circle-arrow-left:before {
+	content: "\e60d";
+}
+.icon-th:before {
+	content: "\e60e";
+}
+.icon-th-list:before {
+	content: "\e60f";
+}
+.icon-ok:before {
+	content: "\e610";
+}
+.icon-remove:before {
+	content: "\e611";
+}
+.icon-download-alt:before {
+	content: "\e612";
+}
+.icon-question-sign:before {
+	content: "\e613";
+}
