@@ -6,14 +6,30 @@
 <h3><i class="icon-info-sign"></i> Icons</h3>
 <div class="container">
 	<div class="span-md-1"><i class="icon-envelope"></i></div>
-</div>
-<div class="container">
 	<div class="span-md-1"><i class="icon-calendar"></i></div>
-</div>
-<div class="container">
 	<div class="span-md-1"><i class="icon-phone2"></i></div>
-</div>
-<div class="container">
 	<div class="span-md-1"><i class="icon-info-sign"></i></div>
 </div>
 
+<h2>Image slider</h2>
+
+<div class="slide-wrapper">
+  <div id="slidr-div">
+    <div data-slidr="1"><img src="/images/ballstueck/bild-1.jpg" alt=""/></div>
+    <div data-slidr="2"><img src="/images/ballstueck/bild-2.jpg" alt=""/></div>
+    <div data-slidr="3"><img src="/images/ballstueck/bild-3.jpg" alt=""/></div>
+    <div data-slidr="4"><img src="/images/ballstueck/bild-4.jpg" alt=""/></div>
+    <div data-slidr="5"><img src="/images/ballstueck/bild-5.jpg" alt=""/></div>
+    <div data-slidr="6"><img src="/images/ballstueck/bild-6.jpg" alt=""/></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    slidr.create("slidr-div", {
+      transition: 'fade',
+      timing: { 'fade': '0.5s ease-in' },
+    }
+    ).auto();
+  })
+</script>

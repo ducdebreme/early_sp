@@ -80,5 +80,15 @@ $experimental-support-for-microsoft    : false !default;
 
 @import "icomoon/style";
 
+// override the page's padding / extend to page border
+.slide-wrapper {
+  margin: 0 -1.5em 0 -1.5em;
+}
 
+#slidr-div {
+  display: block;
+  width: 100%;
+
+  background-color: lightblue;
+}
 
