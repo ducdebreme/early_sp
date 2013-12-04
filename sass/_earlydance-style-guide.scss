@@ -80,15 +80,24 @@ $experimental-support-for-microsoft    : false !default;
 
 @import "icomoon/style";
 
+
+// Image slide show for frontpage
 // override the page's padding / extend to page border
 .slide-wrapper {
   margin: 0 -1.5em 0 -1.5em;
 }
 
-#slidr-div {
+.slidr_container {
   display: block;
   width: 100%;
 
   background-color: lightblue;
+}
+.slidr_slide {
+  width: 100%;
+  img {
+    width: 100%;
+    max-width: auto;
+  }
 }
 

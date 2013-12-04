@@ -11,22 +11,24 @@
 	<div class="span-md-1"><i class="icon-info-sign"></i></div>
 </div>
 
+
+<!-- @see http://bchanx.com/slidr#docs -->
 <h2>Image slider</h2>
 
 <div class="slide-wrapper">
-  <div id="slidr-div">
-    <div data-slidr="1"><img src="/images/ballstueck/bild-1.jpg" alt=""/></div>
-    <div data-slidr="2"><img src="/images/ballstueck/bild-2.jpg" alt=""/></div>
-    <div data-slidr="3"><img src="/images/ballstueck/bild-3.jpg" alt=""/></div>
-    <div data-slidr="4"><img src="/images/ballstueck/bild-4.jpg" alt=""/></div>
-    <div data-slidr="5"><img src="/images/ballstueck/bild-5.jpg" alt=""/></div>
-    <div data-slidr="6"><img src="/images/ballstueck/bild-6.jpg" alt=""/></div>
+  <div class="slidr_container" id="my_slidr"> <!-- the id is needed by slidr.js -->
+    <div class="slidr_slide" data-slidr="1"><img src="/images/ballstueck/bild-1.jpg" alt=""/></div>
+    <div class="slidr_slide" data-slidr="2"><img src="/images/ballstueck/bild-2.jpg" alt=""/></div>
+    <div class="slidr_slide" data-slidr="3"><img src="/images/ballstueck/bild-3.jpg" alt=""/></div>
+    <div class="slidr_slide" data-slidr="4"><img src="/images/ballstueck/bild-4.jpg" alt=""/></div>
+    <div class="slidr_slide" data-slidr="5"><img src="/images/ballstueck/bild-5.jpg" alt=""/></div>
+    <div class="slidr_slide" data-slidr="6"><img src="/images/ballstueck/bild-6.jpg" alt=""/></div>
   </div>
 </div>
 
 <script type="text/javascript">
   jQuery(document).ready(function(){
-    slidr.create("slidr-div", {
+    slidr.create("my_slidr", {
       transition: 'fade',
       timing: { 'fade': '0.5s ease-in' },
     }
